@@ -10,4 +10,5 @@ import com.shivam.solarcalculator.ui.base.MvpView;
 public interface SplashMvpView extends MvpView {
 
     void openMapsActivity();
+
 }

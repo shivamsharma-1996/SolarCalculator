@@ -1,4 +1,4 @@
-package com.shivam.solarcalculator.ui.map;
+package com.shivam.solarcalculator.ui.dashboard;
 
 
 import com.shivam.solarcalculator.ui.base.MvpView;
@@ -9,4 +9,7 @@ import com.shivam.solarcalculator.ui.base.MvpView;
 
 public interface MapsMvpView extends MvpView {
 
+    void pinCurrentLocaion();
+
+    void showPinnedLocations();
 }

@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.shivam.solarcalculator.application.AppClass;
 import com.shivam.solarcalculator.data.DataManager;
+import com.shivam.solarcalculator.data.db.DatabaseHelper;
 import com.shivam.solarcalculator.di.ApplicationContext;
 import com.shivam.solarcalculator.di.module.ApplicationModule;
 import javax.inject.Singleton;
@@ -26,5 +27,7 @@ public interface ApplicationComponent {
     Application application();
 
     DataManager getDataManager();
+
+   // DatabaseHelper getDatabaseHelper();
 
 }

@@ -24,19 +24,4 @@ public final class KeyboardUtils {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    public static void showSoftInput(EditText edit, Context context) {
-        edit.setFocusable(true);
-        edit.setFocusableInTouchMode(true);
-        edit.requestFocus();
-        InputMethodManager imm = (InputMethodManager) context
-                .getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(edit, 0);
-    }
-
-    public static void toggleSoftInput(Context context) {
-        InputMethodManager imm = (InputMethodManager) context
-                .getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-    }
-
 }

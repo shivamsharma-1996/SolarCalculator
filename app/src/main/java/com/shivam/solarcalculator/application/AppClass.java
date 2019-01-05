@@ -2,7 +2,6 @@ package com.shivam.solarcalculator.application;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.shivam.solarcalculator.di.component.ApplicationComponent;
 import com.shivam.solarcalculator.di.component.DaggerApplicationComponent;
 import com.shivam.solarcalculator.di.module.ApplicationModule;
@@ -29,6 +28,7 @@ public class AppClass extends Application {
                 .applicationModule(new ApplicationModule(this)).build();
 
         mApplicationComponent.inject(this);
+
     }
 
     public static Context getAppContext(){

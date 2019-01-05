@@ -6,6 +6,7 @@ import android.content.Context;
 import com.shivam.solarcalculator.data.AppDataManager;
 import com.shivam.solarcalculator.data.DataManager;
 import com.shivam.solarcalculator.data.db.AppDbHelper;
+import com.shivam.solarcalculator.data.db.DatabaseHelper;
 import com.shivam.solarcalculator.data.db.DbHelper;
 import com.shivam.solarcalculator.di.ApplicationContext;
 
@@ -37,6 +38,12 @@ public class ApplicationModule {
     Application provideApplication() {
         return mApplication;
     }
+
+   /* @Provides
+    @Singleton
+    DatabaseHelper provideSqliteDbHelper(DatabaseHelper databaseHelper) {
+        return databaseHelper;
+    }*/
 
     @Provides
     @Singleton

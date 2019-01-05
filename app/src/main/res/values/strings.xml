@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">SolarCalculator</string>
-    <string name="title_activity_maps">Map</string>
 
     <string name="menu_pinned_locations">Pinned Locations</string>
     <string name="menu_pin_location">Pin a Location</string>
     <string name="map_request_failure">You can\'t make map requests</string>
+    <string name="dialog_bookmarks_heading">Select Address</string>
+    <string name="dialog_bookmark_cancel">Cancel</string>
+    <string name="save_pin_success">Address successfully saved</string>
 </resources>

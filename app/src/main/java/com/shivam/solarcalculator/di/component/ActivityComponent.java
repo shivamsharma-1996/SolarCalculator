@@ -3,7 +3,7 @@ package com.shivam.solarcalculator.di.component;
 
 import com.shivam.solarcalculator.di.PerActivity;
 import com.shivam.solarcalculator.di.module.ActivityModule;
-import com.shivam.solarcalculator.ui.map.MapsActivity;
+import com.shivam.solarcalculator.ui.dashboard.MapsActivity;
 import com.shivam.solarcalculator.ui.splash.SplashActivity;
 import dagger.Component;
 

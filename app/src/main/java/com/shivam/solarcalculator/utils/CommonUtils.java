@@ -2,10 +2,15 @@ package com.shivam.solarcalculator.utils;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.util.TypedValue;
 
 import com.shivam.solarcalculator.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by Shivam Sharma on 03-01-2019.
@@ -31,5 +36,9 @@ public class CommonUtils {
         return progressDialog;
     }
 
+    public static float dpToPx(float dp, Context context) {
+        Resources r = context.getResources();
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
+    }
 
 }

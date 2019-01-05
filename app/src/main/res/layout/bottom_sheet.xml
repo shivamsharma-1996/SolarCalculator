@@ -1,13 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottom_sheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/grey"
+    android:background="@color/grey_200"
     android:orientation="vertical"
     app:behavior_hideable="true"
     app:behavior_peekHeight="112dp"
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_4"
+            android:layout_marginRight="@dimen/dimens_4"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="@dimen/dimens_2"
+            app:cardElevation="@dimen/dimens_2"
+            app:cardUseCompatPadding="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimens_10">
+
+                <ImageView
+                    android:id="@+id/iv_sun"
+                    android:layout_width="@dimen/dimens_40"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_sun"/>
+
+                <ImageView
+                    android:id="@+id/iv_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_sunrise_up"
+                    android:paddingTop="@dimen/dimens_10"
+                    android:paddingBottom="@dimen/dimens_10"
+                    app:layout_constraintStart_toEndOf="@id/iv_sun"
+                    app:layout_constraintTop_toTopOf="@id/iv_sun"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_sun"
+                    app:layout_constraintEnd_toStartOf="@id/tv_sunrise"/>
+
+                <TextView
+                    android:id="@+id/tv_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6.00 AM"
+                    android:fontFamily="@font/calibri"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/textSizeMedium"
+                    app:layout_constraintStart_toEndOf="@id/iv_sunrise"
+                    app:layout_constraintEnd_toStartOf="@id/iv_sunset"
+                    app:layout_constraintTop_toTopOf="@id/iv_sunrise"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_sunrise"/>
+
+                <ImageView
+                    android:id="@+id/iv_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_sunset_down"
+                    android:paddingTop="@dimen/dimens_10"
+                    android:paddingBottom="@dimen/dimens_10"
+                    app:layout_constraintStart_toEndOf="@id/tv_sunrise"
+                    app:layout_constraintTop_toTopOf="@id/iv_sun"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_sun"
+                    app:layout_constraintEnd_toStartOf="@id/tv_sunset"/>
+
+                <TextView
+                    android:id="@+id/tv_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.00 PM"
+                    android:fontFamily="@font/calibri"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toEndOf="@id/iv_sunset"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_sunrise"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_sunrise"/>
+
+                <ImageView
+                    android:id="@+id/iv_moon"
+                    android:layout_width="@dimen/dimens_40"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_moon"
+                    android:layout_marginTop="@dimen/dimens_24"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_sun"/>
+
+                <ImageView
+                    android:id="@+id/iv_moonrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_moonrise_up"
+                    android:paddingTop="@dimen/dimens_10"
+                    android:paddingBottom="@dimen/dimens_10"
+                    app:layout_constraintStart_toEndOf="@id/iv_sun"
+                    app:layout_constraintTop_toTopOf="@id/iv_moon"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_moon"
+                    app:layout_constraintEnd_toStartOf="@id/tv_moonrise"/>
+
+                <TextView
+                    android:id="@+id/tv_moonrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8.00 PM"
+                    android:fontFamily="@font/calibri"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/textSizeMedium"
+                    app:layout_constraintStart_toEndOf="@id/iv_moonrise"
+                    app:layout_constraintEnd_toStartOf="@id/iv_moonset"
+                    app:layout_constraintTop_toTopOf="@id/iv_moonrise"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_moonrise"/>
+
+                <ImageView
+                    android:id="@+id/iv_moonset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_moonset_down"
+                    android:paddingTop="@dimen/dimens_10"
+                    android:paddingBottom="@dimen/dimens_10"
+                    app:layout_constraintStart_toEndOf="@id/tv_moonrise"
+                    app:layout_constraintTop_toTopOf="@id/iv_moon"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_moon"
+                    app:layout_constraintEnd_toStartOf="@id/tv_sunset"/>
+
+                <TextView
+                    android:id="@+id/tv_moonset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.00 AM"
+                    android:fontFamily="@font/calibri"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toEndOf="@id/iv_moonset"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_moonset"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_moonset"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimens_4"
+            android:layout_marginLeft="@dimen/dimens_4"
+            android:layout_marginRight="@dimen/dimens_4"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="@dimen/dimens_2"
+            app:cardElevation="@dimen/dimens_2"
+            app:cardUseCompatPadding="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimens_16">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday, January 4, 2019"
+                    android:textColor="@color/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:fontFamily="@font/calibri"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_previous_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:elevation="@dimen/dimens_8"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_backward"
+                    app:backgroundTint="@color/colorPrimary"
+                    tools:targetApi="lollipop"
+                    android:layout_marginEnd="@dimen/dimens_16"
+                    app:layout_constraintEnd_toStartOf="@id/fab_play"
+                    app:layout_constraintTop_toTopOf="@+id/fab_play"
+                    app:layout_constraintBottom_toBottomOf="@id/fab_play"
+                    app:layout_constraintEnd_toEndOf="@id/searchView"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    app:elevation="@dimen/dimens_8"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_play"
+                    app:backgroundTint="@color/colorPrimary"
+                    tools:targetApi="lollipop"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_next_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:elevation="@dimen/dimens_8"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_forward"
+                    app:backgroundTint="@color/colorPrimary"
+                    tools:targetApi="lollipop"
+                    android:layout_marginStart="@dimen/dimens_16"
+                    app:layout_constraintTop_toTopOf="@+id/fab_play"
+                    app:layout_constraintBottom_toBottomOf="@id/fab_play"
+                    app:layout_constraintStart_toEndOf="@id/fab_play"/>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

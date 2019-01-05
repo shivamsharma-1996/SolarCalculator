@@ -10,6 +10,5 @@ import com.shivam.solarcalculator.ui.base.MvpPresenter;
 @PerActivity
 public interface SplashMvpPresenter<V extends SplashMvpView> extends MvpPresenter<V> {
 
-    boolean checkPlayServiceAvailability();
 
 }

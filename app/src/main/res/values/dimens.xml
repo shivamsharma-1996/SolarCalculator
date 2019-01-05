@@ -54,5 +54,6 @@
     <dimen name="dimens_150">150dp</dimen>
     <dimen name="dimens_120">120dp</dimen>
     <dimen name="dimens_64">64dp</dimen>
+    <dimen name="dimens_45">45dp</dimen>
 
 </resources>
