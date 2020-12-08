@@ -1,5 +1,5 @@
 # SolarCalculator
-A PhaseTime calculator to detect Sunrise-Sunset time with respect to input date & location.
+A PhaseTime calculator to detect Sunrise-Sunset time with respect to given date & location.
 </br> 
 ALGORITHM Used :- http://edwilliams.org/sunrise_sunset_algorithm.htm
  </br> 
